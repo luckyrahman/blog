@@ -118,6 +118,10 @@
 			tr.find('input, select, textarea').val('');
 			tr.appendTo("tbody");
 		});
+
+		$('table').delegate('.row_remove', 'click', function() {
+			$(this).closest('tr').remove();
+		});
 	});
 	
 </script>
