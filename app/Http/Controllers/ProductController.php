@@ -53,7 +53,7 @@ class ProductController extends Controller
            $productData[$i]['status'] =$request->status[$i];
            $productData[$i]['created_at']=date('Y-m-d H:i:s');
            $productData[$i]['product_image'] = $file[$i]->getClientOriginalName();
-
+           // image upload code
            $destinationPath = 'uploads/products';
            $file[$i]->move($destinationPath,$file[$i]->getClientOriginalName());
         }
